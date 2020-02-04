@@ -64,7 +64,8 @@ class Student
       SELECT *
       FROM students
       WHERE grade = 10 
-      LIMIT (x)
+      LIMIT ?
+      VALUES (x)
     SQL
  
      DB[:conn].execute(sql).map do |row|
